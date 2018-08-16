@@ -184,7 +184,7 @@ open class ScatterChartRenderer: LineScatterCandleRadarRenderer
                             text: text,
                             point: CGPoint(
                                 x: pt.x,
-                                y: pt.y - shapeSize - lineHeight),
+                                y: pt.y - shapeSize - lineHeight + 30),
                             align: .center,
                             attributes: [NSAttributedStringKey.font: valueFont, NSAttributedStringKey.foregroundColor: dataSet.valueTextColorAt(j)]
                         )
