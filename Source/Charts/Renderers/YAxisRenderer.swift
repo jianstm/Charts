@@ -317,6 +317,10 @@ open class YAxisRenderer: AxisRendererBase
             position.y = CGFloat(l.limit)
             position = position.applying(trans)
             
+            l.positionYDidChangeCallbacks.forEach {
+                $0(Double(position.y))
+            }
+            
             context.beginPath()
             context.move(to: CGPoint(x: viewPortHandler.contentLeft, y: position.y))
             context.addLine(to: CGPoint(x: viewPortHandler.contentRight, y: position.y))

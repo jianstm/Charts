@@ -41,6 +41,11 @@ open class ChartLimitLine: ComponentBase
     @objc open var label = ""
     @objc open var labelPosition = LabelPosition.rightTop
     
+    var positionYDidChangeCallbacks: [(Double) -> Void] = []
+    open func onPositionYDidChange(_ body: @escaping (Double) -> Void) {
+        positionYDidChangeCallbacks.append(body)
+    }
+    
     public override init()
     {
         super.init()
