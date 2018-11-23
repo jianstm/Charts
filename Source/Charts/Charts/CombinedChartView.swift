@@ -179,8 +179,8 @@ open class CombinedChartView: BarLineChartViewBase, CombinedChartDataProvider
     /// if set to true, a rounded rectangle with the corners is drawn on each bar
     open var drawRoundedBarEnabled: Bool
         {
-        get { return (renderer as! CombinedChartRenderer!).drawRoundedBarEnabled }
-        set { (renderer as! CombinedChartRenderer!).drawRoundedBarEnabled = newValue }
+        get { return (renderer as! CombinedChartRenderer).drawRoundedBarEnabled }
+        set { (renderer as! CombinedChartRenderer).drawRoundedBarEnabled = newValue }
     }
     
     /// - returns: `true` if drawing values above bars is enabled, `false` ifnot
